@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            background-color: #FFC0CB; /* Color de fondo rosa pastel */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        
+        h1 {
+            font-size: 40px;
+            animation: appear 2s linear;
+        }
+        
+        p {
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        #countdown {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #FFFF99;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Cumpleaños</h1>
+    <p>Te amo demasiado, eres la persona más importante para mí. Espero que este día sea muy feliz y que siempre lo recuerdes. ¡Diviértete mucho, novia! Solo tenemos una vez en el año para celebrar nuestro cumpleaños. Solo se vive una vez, así que tienes que disfrutar. TEAMO/MIAU YOU/LOVE YOU/TE QUIERO.</p>
+    <div id="countdown">45</div>
+    
+    <script>
+        // Contador de tiempo
+        const countdownElement = document.getElementById('countdown');
+        let countdown = 45;
+
+        function updateCountdown() {
+            countdown--;
+            countdownElement.textContent = countdown;
+            if (countdown === 0) {
+                window.location.href = 'https://png.pngtree.com/background/20230612/original/pngtree-cute-kitten-blowing-out-candles-on-a-birthday-cake-picture-image_3179730.jpg';
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+
